@@ -1,0 +1,3 @@
+
+class OperationError(ArithmeticError):
+    pass
