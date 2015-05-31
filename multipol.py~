@@ -90,8 +90,8 @@ class MultiPol(object):
                     else:
                         pol_list.append((MultiPol(a) + MultiPol(b)).pol)
 
-                pol_list.extend(self.pol[k:])
-                pol_list.extend(other.pol[k:])
+                    pol_list.extend(self.pol[k:])
+                    pol_list.extend(other.pol[k:])
 
                 return MultiPol(pol_list, max(self.var, other.var))
 
