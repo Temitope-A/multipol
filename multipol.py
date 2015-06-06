@@ -177,7 +177,7 @@ class MultiPol(object):
         else:
             return self * self ** (exp - 1)
 
-#-Division
+# Division
 #    def __truediv__(self, other):
 #        m = self.degree
 #        try:
