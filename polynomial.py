@@ -1,21 +1,20 @@
-from numbers import Number
 from multipol import MultiPol
+
 
 class Polynomial(MultiPol):
 
-#Instances are polynomials, implemented operations are additions
-# (subtractions), multiplications. Numbers and be added or multiplied seamlessly.
+# Instances are polynomials, implemented operations are additions
+# (subtractions), multiplications. Numbers and be added or multiplied
+# seamlessly.
 # Pol([1,0,-1,3]) is 1-x^2+3x^3
 # Evaluation can be done by calling the polynomial on the value
+# For interactive use, import variable x from var.py
 
     def __init__(self, pol_list):
 
         MultiPol.__init__(self, pol_list, 1)
 
-
-#Operator methods
-
-#Addition and subtraction  
+#Addition and subtraction
 
     def __str__(self):
         if self.pol[0] != 0:
@@ -35,13 +34,13 @@ class Polynomial(MultiPol):
                     pol_str = (str(a) + 'x^{}'.format(i) + nextsign + pol_str)
                 else:
                     pol_str = ('x^{}'.format(i) + nextsign + pol_str)
-                if self.pol[i] > 0: 
-                    nextsign = '+' 
+                if self.pol[i] > 0:
+                    nextsign = '+'
                 else:
                     nextsign = '-'
         if nextsign == '-':
             pol_str = '-' + pol_str
-            
+
         return pol_str
 
 

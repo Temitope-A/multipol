@@ -59,7 +59,7 @@ def str2pol(strpol, var):
                             v = [0, 1]
                             for j in reversed(range(i, varnum - 1)):
                                 v = [v]
-                            return MultiPol(v)
+                            return MultiPol(v, varnum)
                     raise SyntaxError('Invalid string')
 
 

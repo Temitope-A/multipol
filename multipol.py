@@ -96,13 +96,12 @@ class MultiPol(object):
                 return MultiPol(pol_list, max(self.var, other.var))
 
             elif self.var > other.var:
-                pol_list=other.pol
+                pol_list = other.pol
                 for i in range(other.var, self.var):
                     pol_list = [pol_list]
                 return self + MultiPol(pol_list, self.var)
             else:
-                return other + self             
-        
+                return other + self
 
     def __radd__(self, other):
         return self + other
@@ -157,12 +156,12 @@ class MultiPol(object):
                 return MultiPol(pol_list, d)
 
             elif self.var > other.var:
-                pol_list=other.pol
+                pol_list = other.pol
                 for i in range(other.var, self.var):
                     pol_list = [pol_list]
                 return self * MultiPol(pol_list, self.var)
             else:
-                return other * self 
+                return other * self
 
     def __rmul__(self, other):
         return self * other
